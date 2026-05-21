@@ -11,7 +11,7 @@ jobs:
         run: pwd
 
       - name: List files
-        run: ls
+        run: lsssss
 
       - name: Node version
         run: node -v
