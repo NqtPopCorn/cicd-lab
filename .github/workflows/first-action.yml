@@ -1,17 +1,23 @@
-name: My First Action
+name: Express CI
 
 on: push
 
 jobs:
-  hello:
+  test-app:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print current folder
-        run: pwd
+      # copy toàn bộ root folder ~ git clone
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-      - name: List files
-        run: lsssss
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-      - name: Node version
+      - name: Verify Node
         run: node -v
+
+      - name: Install packages
+        run: npm install
