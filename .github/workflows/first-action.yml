@@ -20,7 +20,7 @@ jobs:
         run: node -v
 
       - name: Install packages
-        run: npm 
+        run: npm install 
         
       - name: Start app
         run: npm start
